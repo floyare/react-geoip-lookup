@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+:root{
+  --color: #1fdf9c;
+}
+
+body{
+  background-color: rgb(22, 22, 22);
+}
+
+.wrapper{
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}
+
+.leaflet-container{
+  width: 300px;
+  height: 300px;
+  border-radius: 30px;
+}
+
+.title{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.title li{
+  list-style: none;
+  margin: 5px 15px;
+  display: inline-block;
+  vertical-align: middle;
+  color: #fff;
+}
+
+.title li img{
+  width: 100px;
+}
+
+input{
+  background-color: rgb(43, 43, 43);
+  color: #fff;
+  font-size: 18px;
+  border-radius: 30px;
+  padding: 5px 20px;
+  border: none;
+  outline: none;
+  border: 1px solid transparent;
+  margin: 5px 0px 5px 0px;
+  transition: 0.2s;
+}
+
+.small__text{
+  margin: 0px 0px 15px 0px;
+  font-size: 12px;
+  color: rgb(119, 119, 119);
+  text-align: center;
+}
+
+input:focus{
+  border: 1px solid var(--color);
+  transition: 0.2s;
+}
+
+button{
+  display: block;
+  width: 97%;
+  border-radius: 30px;
+  background-color: var(--color);
+  color: #fff;
+  padding: 5px 0px;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover{
+  filter: drop-shadow(1px 1px 5px var(--color));
+  transform: translateY(-2px);
+  transition: 0.2s;
+}
+
+.result__wrapper{
+  display: grid;
+  place-items: center;
+}
+
+.result__container{
+  margin: 30px 0px;
+}
+
+.result__box{
+  background-color: rgb(43, 43, 43);
+  padding: 30px 50px;
+  border-radius: 30px;
+  border: 1px solid var(--color);
+  animation: 1s fade;
+}
+
+.result__box ul li{
+  color: var(--color);
+  margin: 5px 30px;
+}
+.result__box ul li p{
+  color: rgb(212, 209, 209);
+  font-size: 20px;
+  font-weight: 100;
+}
+
+.result__box ul li p span{
+  color: var(--color);
+  font-weight: 700;
+}
+
+.result__box h2{
+  color: #fff;
+}
+
+.result__side{
+  display: inline-block;
+  margin: 20px 40px;
+  vertical-align: middle;
+}
+
+.error__box{
+  color: #fff;
+  background-color: rgb(213, 79, 79);
+  text-align: center;
+  margin: 20px;
+  padding: 5px;
+  border-radius: 30px;
+  animation: 1s fade;
+}
+
+@keyframes fade {
+  from{
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+  to{
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes meetup {
+  0%, 100% {
+    -webkit-transform: rotate(calc(var(--rotation) * 1deg)) translateY(0);
+            transform: rotate(calc(var(--rotation) * 1deg)) translateY(0); }
+  50% {
+    -webkit-transform: rotate(calc(var(--rotation) * 1deg)) translateY(300%);
+            transform: rotate(calc(var(--rotation) * 1deg)) translateY(300%); } }
+@keyframes meetup {
+  0%, 100% {
+    -webkit-transform: rotate(calc(var(--rotation) * 1deg)) translateY(0);
+            transform: rotate(calc(var(--rotation) * 1deg)) translateY(0); }
+  50% {
+    -webkit-transform: rotate(calc(var(--rotation) * 1deg)) translateY(300%);
+            transform: rotate(calc(var(--rotation) * 1deg)) translateY(300%); } }
+
+.meetup {
+  -webkit-animation: spin 1s infinite linear;
+          animation: spin 1s infinite linear;
+  height: 10px;
+  width: 10px; }
+  .meetup div {
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    -webkit-animation: meetup 1.25s infinite ease;
+            animation: meetup 1.25s infinite ease;
+    background: #fff;
+    border-radius: 100%; }
+    .meetup div:nth-child(1) {
+      --rotation: 90; }
+    .meetup div:nth-child(2) {
+      --rotation: 180; }
+    .meetup div:nth-child(3) {
+      --rotation: 270; }
+    .meetup div:nth-child(4) {
+      --rotation: 360; }
+
+@-webkit-keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
+
+@keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
+
+.loading__wrapper{
+  display: grid;
+  place-items: center;
+  margin: 40px 0px;
+}
