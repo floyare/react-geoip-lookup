@@ -7,3 +7,4 @@ Basic GEOIP lookup based on public API.
 ## Resources used:
 * Leaflet
 * ipapi.co
+* whirl.netlify.app
